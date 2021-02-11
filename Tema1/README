@@ -1,0 +1,47 @@
+Oprea Olivia Maria-Magdalena 333CA
+
+Pentru stocarea numerelor mari si usurarea facerii temei am folosit boost pe
+care l-am gasit pe net ca poate lucra cu numere ff mari :)
+Pentru inceput tin minte lungimea setului de simboluri pentru a verifica dupa
+aceea daca lungimea este una corecta pentru programul nostru.
+Apoi imi transform fiecare 4 caractere din setul de simboluri in instructiune
+si le bag intr-un vector de coduri. Tot aici verific si daca codul meu este o
+paranteza deschisa sau inchisa pentru a vedea daca sunt puse corect, altfel
+sa afiseze eroare si sa nu execute codul.
+Dupa aceea o sa trec prin fiecare cod din vectorul meu si o sa execut
+instructiunea.
+Pentru a face toate seturile de instructiuni am folosit o coada cu 2 capete(deque)
+deoarece am considerat ca e mai usor sa scot si sa bag elemente pe unde am 
+nevoie mai eficient.
+Compar fiecare cod cu codul pentru instructiuni, si execut instructiunea daca 
+este o potrivire. 
+Pentru NOP nu se intampla nimic.
+Pentru INPUT prima oara verific daca ceea ce vine este corect format si nu
+contine litere, iar apoi daca este corect o bag in coada.
+Pentru ROT verific mai intai daca am elemente in coada, iar mai apoi trimit
+elementul la inceputul cozii.
+Pentru SWAP voi verifica daca pe stiva am destule elemente, iar apoi le 
+interschimb.
+PUSH face push 1 pe coada.
+RROT face aceelasi lucru ca ROT dar pe dos, adica ia ce e la coada si pune
+in varf.
+DUP verifica daca are ce dublica, iar apoi il duplica si il pune in coada.
+ADD verifica ca are 2 elemente sa adune si apoi le aduna si le pune pe coada.
+La L-Brace verific daca coada e goala ca sa pot da exceptie, apoi verific daca
+am 0 in varf ca sa pot sa ma opresc din executia instructiunilor si doar
+sa caut paranteza care o inchide, altfel imi v-a executa instructiunile
+din paranteze pe care le tin minte intr-un vector de instructiuni, care este
+activat de un bool la inceput cand se da de o paranteza deschisa.
+OUTPUT verifica daca are ce afisa si afiseaza si scoate elem din coada.
+MULTIPLY verifica daca are ce inmulti, le inmulteste si le pune pe coada.
+EXECUTE verifica ca are 4 elem in coada si apoi voi transforma cele 4 elemente
+intr-un cod asa cum am facut si in main, iar mai apoi acel cod il voi executa
+reapeland functia.
+NEGATE verifica ca are ce nega iar apoi o sa nege elementul din varf si il pune
+inapoi.
+POP verifica ca are ce scoate de pe stiva iar apoi il scoate.
+R_BRACE verifica daca coada e goala ca sa poata da exception. Daca in varful
+cozii am 0 se vor seta boolurile mele de verificare de paranteze pe false si
+asa nu o sa mai execute instructiunile din paranteza din nou si va trece peste
+paranteza, altfel o sa se reapeleze functia de unde era ultima paranteza
+deschisa creandu-se un loop.
